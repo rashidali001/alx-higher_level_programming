@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import math
-number = 3.14159
-print(f"Float: {str(round(number, 2))}")
+number = number = 3.14159
+print(f"Float: {number:.2f}");
 
