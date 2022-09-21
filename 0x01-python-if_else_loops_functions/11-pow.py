@@ -10,6 +10,3 @@ def pow(a, b):
         product = product * a
         i += 1
     return product
-
-
-print(pow(100, -2))
