@@ -7,11 +7,8 @@ if __name__ == "__main__":
     if arg == 0:
         print('{}'.format(sum))
         exit()
-
-    i = 1
-    
+    i = 1 
     while i <= arg:
         sum = sum + int(sys.argv[i])
         i += 1
-
     print('{}'.format(sum))
