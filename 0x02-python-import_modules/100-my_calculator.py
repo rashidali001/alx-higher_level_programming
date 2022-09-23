@@ -6,7 +6,6 @@ if __name__ == "__main__":
 
     if (len(argv) - 1) != 3:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
-        print(1)
         exit(1)
 
     a = int(argv[1])
@@ -27,7 +26,4 @@ if __name__ == "__main__":
 
     else:
         print('Unkown operator. Available operators: +, -, * and /')
-        print(1)
         exit(1)
-
-    print(0)
