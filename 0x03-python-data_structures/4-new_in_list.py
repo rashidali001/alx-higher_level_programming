@@ -6,7 +6,7 @@ def new_in_list(my_list, idx, element):
     if idx >= len(my_list):
         return my_list
     for i in my_list:
-        if i == idx:
+        if i == (idx + 1):
             new_list.append(element)
             continue
         new_list.append(i)
