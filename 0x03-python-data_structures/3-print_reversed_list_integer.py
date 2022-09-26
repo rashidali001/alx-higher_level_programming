@@ -6,4 +6,4 @@ def print_reversed_list_integer(my_list=[]):
         reversed_list.append(my_list[length])
         length -= 1
     for i in reversed_list:
-        print("{}".format(i))
+        print("{:d}".format(i))
