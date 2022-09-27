@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-import random
 
-navlist = []
 
-for i in range(5):
-    navlist.append(random.randrange(1,10))
-
-for i in navlist:
-    print("{}".format(i))
+t =tuple((1, "hello"))
+for i in t:
+    print(i)
