@@ -45,4 +45,4 @@ def roman_to_int(roman_string):
                 integer_value += roman[j]
         i += 1
 
-    return integer_value
+    return int(integer_value)
