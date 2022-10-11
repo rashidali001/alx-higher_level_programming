@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git add .
+git commit -m "Pyhton exceptions"
+git push
