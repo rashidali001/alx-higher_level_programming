@@ -19,7 +19,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except ValueError:
             division.append(0)
         finally:
-            pass
+            continue
 
         i += 1
     return division
