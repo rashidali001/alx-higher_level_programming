@@ -20,7 +20,5 @@ def list_division(my_list_1, my_list_2, list_length):
             print("division by 0")
             division.append(0)
         finally:
-            continue
-
-        i += 1
+            i += 1
     return division
