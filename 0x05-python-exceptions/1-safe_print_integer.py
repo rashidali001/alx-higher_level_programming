@@ -2,10 +2,9 @@
 
 def safe_print_integer(value):
     try:
-        print("{:d}".format(int(value)))
+        print("{:d}".format(value)
         return True
 
     except ValueError:
-        print("Not an integer")
-
-safe_print_integer(67.55)
+        return False
+    
