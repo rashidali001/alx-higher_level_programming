@@ -1,31 +1,12 @@
 #!/usr/bin/python3
-'''
-Task:
-    1 - private instance attribute
-    2 - pass default value on size if not provided
-    3 - size must be an integer else raise TypeError
-    4 - if size < 0 raise ValueError
-'''
+'''Task'''
 
 
 class Square:
-    '''Defines a class with private object attributes'''
-
     def __init__(self, size=0):
-        try:
-            if isinstance(size, int):
-                pass
-            else:
-                raise TypeError
-        except TypeError:
-            print("size must be an integer")
-            return
-
-        try:
-            if size < 0:
-                raise ValueError
-        except ValueError:
-            print("size must be >= 0")
-            return
-        else:
-            self.__size = size
+        '''This is a class'''
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
