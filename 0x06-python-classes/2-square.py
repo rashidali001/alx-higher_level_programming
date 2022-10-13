@@ -19,14 +19,13 @@ class Square:
                 raise TypeError
         except TypeError:
             print("size must be an integer")
+            return
 
         try:
             if size < 0:
-                pass
-        except (ValueError, TypeError):
+                raise ValueError
+        except ValueError:
             print("size must be >= 0")
+            return
         else:
             self.__size = size
-
-    def isinteger(self):
-        pass
