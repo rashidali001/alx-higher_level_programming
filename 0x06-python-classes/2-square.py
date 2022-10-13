@@ -12,9 +12,8 @@ class Square:
     '''Defines a class with private object attributes'''
 
     def __init__(self, size=0):
-        self.size = size
         try:
-            if isinstance(self.size, int):
+            if isinstance(size, int):
                 pass
             else:
                 raise TypeError
@@ -23,11 +22,11 @@ class Square:
 
         try:
             if size < 0:
-                raise ValueError
-        except ValueError:
+                pass
+        except (ValueError, TypeError):
             print("size must be >= 0")
         else:
-            self.size = size
+            self.__size = size
 
     def isinteger(self):
         pass
