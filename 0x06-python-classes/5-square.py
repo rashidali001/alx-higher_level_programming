@@ -2,10 +2,6 @@
 ''' Task 4'''
 
 
-import sys
-var = sys.stdout
-
-
 class Square:
     '''Square class definition'''
     def __init__(self, size=0):
@@ -29,12 +25,12 @@ class Square:
 
     def my_print(self):
         if self.size == 0:
-            var.write(" " + '\n')
+            print()
 
         for i in range(self.size):
 
             for i in range(self.size):
 
-                var.write("#")
+                print("#", end="")
 
-            var.write('\n')
+            print()
