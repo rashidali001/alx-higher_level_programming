@@ -34,10 +34,10 @@ class Rectangle:
 
         except TypeError:
             print("width must be an integer")
-            return None
+            self.__width = 0
         except ValueError:
             print("width must be >= 0")
-            return None
+            self.__width = 0
         else:
             self.__width = value
 
@@ -54,9 +54,9 @@ class Rectangle:
                 raise ValueError
         except TypeError:
             print("height must be an integer")
-            return None
+            self.__height = 0
         except ValueError:
             print("height must be >= 0")
-            return None
+            self.__height = 0
         else:
             self.__height = value
