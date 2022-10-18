@@ -71,11 +71,11 @@ class Rectangle:
 
     def __str__(self):
         result = ""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return result
 
         for i in range(self.__height):
-            for i in range(self.__width):
+            for i in range(self.width):
                 result += "#"
             result += '\n'
 
