@@ -1,108 +1,80 @@
 #!/usr/bin/python3
-'''
-    CLass name: Rectangle
-    private instance attributes: width & height
-    width: getter -> def width(self)
-    height: getter -> def height(self)
-    inside setters:
-    if values are  not int
-    raise TypeError exception
-    if value < 0
-    raise ValueError exception
-'''
+"""Retangle"""
 
 
 class Rectangle:
-    '''This is a Rectangle class'''
-
+    """ class Rectangle """
+    _Rectangle__width = None
+    _Rectangle__height = None
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, widthValue=0, heightValue=0):
+        self.width = widthValue
+        self.height = heightValue
         Rectangle.number_of_instances += 1
-        self.width = width
-        self.height = height
 
     @property
     def width(self):
-        return self.__width
+        return self._Rectangle__width
 
     @width.setter
     def width(self, value):
-
-        try:
-            if type(value) is not int:
-                raise TypeError
-            if value < 0:
-                raise ValueError
-
-        except TypeError:
-            print("width must be an integer")
-            self.__width = 0
-        except ValueError:
-            print("width must be >= 0")
-            self.__width = 0
-        else:
-            self.__width = value
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if (value < 0):
+            raise ValueError("width must be >= 0")
+        self._Rectangle__width = value
 
     @property
     def height(self):
-        return self.__height
+        return self._Rectangle__height
 
     @height.setter
     def height(self, value):
-        try:
-            if type(value) is not int:
-                raise TypeError
-            if value < 0:
-                raise ValueError
-        except TypeError:
-            print("height must be an integer")
-            self.__height = 0
-        except ValueError:
-            print("height must be >= 0")
-            self.__height = 0
-        else:
-            self.__height = value
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if (value < 0):
+            raise ValueError("height must be >= 0")
+        self._Rectangle__height = value
 
     def area(self):
-        return int(self.height) * int(self.width)
+        return (self.width * self.height)
 
     def perimeter(self):
         if self.width == 0 or self.height == 0:
             return 0
-        return (int(self.height) * 2) + (int(self.width) * 2)
+        else:
+            return (self.width + self.height) * 2
 
     def __str__(self):
         result = ""
-        if self.width == 0 or self.height == 0:
-            return result
-
-        for i in range(self.height):
-            for i in range(self.width):
-                result += self.print_symbol
-            result += '\n'
-
+        if (self.width == 0 or self.height == 0):
+            result += ''
+        else:
+            for row in range(self.height):
+                result += str(self.print_symbol) * self.width
+                if (row < self.height - 1):
+                    result += '\n'
         return result
 
     def __repr__(self):
-        return ("Rectangle({:d}, {:d})". format(self.width, self.height))
+        return ("Rectangle({:d}, {:d})".format(self.width, self.height))
 
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
-    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        if not (isinstance(rect_1, Rectangle)):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if not (isinstance(rect_2, Rectangle)):
+        if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
 
-        if rect_1.area() > rect_2.area() or rect_1.area() == rect_2.area():
-            return rect_1
+        if (rect_1.area() > rect_2.area() or rect_1.area() is rect_2.area()):
+            return (rect_1)
         else:
-            return rect_2
+            return (rect_2)
 
     @classmethod
     def square(cls, size=0):
