@@ -118,4 +118,3 @@ Test div as 0 or non-int or non-float:
      Traceback (most recent call last):
      ...
      TypeError: div must be a number
-     
