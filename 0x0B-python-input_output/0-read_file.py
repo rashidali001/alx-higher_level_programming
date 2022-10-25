@@ -7,5 +7,7 @@ def read_file(filename=""):
     ''' Function used for reading files'''
 
     with open(filename, mode="r", encoding="UTF8") as myFile:
-        for line in myFile:
-            print(line, end="")
+        read_data = myFile.read()
+        print(read_data, end="")
+
+    myFile.close()
