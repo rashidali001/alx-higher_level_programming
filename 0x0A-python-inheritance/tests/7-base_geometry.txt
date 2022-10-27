@@ -1,0 +1,45 @@
+Test the `7-base_geometry` module
+----------------------------------------
+
+Using BaseGeometry
+------------------
+------------------
+
+first import
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Module documentation test
+>>> len(__import__("7-base_geometry").__doc__) > 0
+True
+
+
+Class documentation test
+>>> len(__import__("7-base_geometry").BaseGeometry.__doc__) > 0
+True
+
+Area function documentation test
+>>> len(__import__("7-base_geometry").area.__doc__) > 0
+True
+
+Function documentation test
+>>> len(__import__("7-base_geometry").integer_validator.__doc__) > 0
+True
+
+Variable instance test
+>>> bg = BaseGeometry()
+
+Type return test
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
+
+
+>>> bg.integer_validator("my_int", 12)
+>>>
+
+>>> bg.integer_validator("width", 89)
+>>>
+
+>>> bg.integer_validator("num", -1)
+....
+ValueError: num must be greater than 0
