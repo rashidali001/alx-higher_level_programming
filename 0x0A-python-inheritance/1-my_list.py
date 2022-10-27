@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-'''Prints list in ascending order'''
+"""
+A class MyList that inherits from list:
+"""
 
 
-class Mylist:
-    ''''MyList class'''
-
+class MyList:
+    """
+    A class MyList that inherits from list
+    """
     def print_sorted(self):
-        '''Public instance method'''
-
+        """
+        public instance method
+        that prints the list, but sorted (ascending sort)
+        """
         print(sorted(self))
