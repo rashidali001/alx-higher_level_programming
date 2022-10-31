@@ -21,41 +21,41 @@ class Rectangle(Base):
         self.y = y
 
     @property
-    def get_width(self):
+    def width(self):
         '''getting width'''
         return self.__width
 
-    @get_width.setter
-    def set_width(self, value):
+    @width.setter
+    def width(self, value):
         '''setting width'''
-        self.__witdh = value
+        self.__width = value
 
     @property
-    def get_height(self):
+    def height(self):
         '''getting height'''
         return self.__width
 
-    @get_height.setter
-    def set_height(self, value):
+    @height.setter
+    def height(self, value):
         '''setting height'''
         self.__height = value
 
     @property
-    def get_x(self):
+    def x(self):
         '''getting x'''
         return self.__x
 
-    @get_x.setter
-    def set_x(self, value):
+    @x.setter
+    def x(self, value):
         '''setting x'''
         self.__x = value
 
     @property
-    def get_y(self):
+    def y(self):
         '''getting y'''
         return self.__y
 
-    @get_y.setter
-    def set_y(self, value):
+    @y.setter
+    def y(self, value):
         '''setting y'''
         self.__y = value
