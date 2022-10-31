@@ -5,7 +5,20 @@
     - inherits from Base
     - Private instance attributes (2)
 '''
-Base = __import__('base').Base
+
+
+class Base:
+    '''Base class'''
+
+    __nb_objects = 0
+
+    def __init__(self, id=None):
+        '''__init__ method'''
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
 
 class Rectangle(Base):
@@ -14,7 +27,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Initializing'''
 
-        super(Rectangle, self).__init__(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
