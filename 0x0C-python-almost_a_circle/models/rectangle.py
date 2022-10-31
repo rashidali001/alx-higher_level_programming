@@ -27,8 +27,6 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Initializing'''
 
-        if not isinstance(id, int) and id is not None:
-            raise TypeError("id must be a integer")
         if not isinstance(width, int):
             raise TypeError("width must be a integer")
         if not isinstance(height, int):
