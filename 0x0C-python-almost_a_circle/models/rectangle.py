@@ -46,10 +46,10 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         super(Rectangle, self).__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.width = int(width)
+        self.height = int(height)
+        self.x = int(x)
+        self.y = int(y)
 
     @property
     def width(self):
@@ -58,56 +58,63 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        '''setting width'''
+        '''setting value of width'''
         if not isinstance(value, int):
             raise TypeError("width must be a integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
+        self.__width = int(value)
 
     @property
     def height(self):
-        '''getting height'''
+        '''getting value of height'''
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''setting height'''
+        '''setting value of height'''
         if not isinstance(value, int):
             raise TypeError("height must be a integer")
         if value <= 0:
             raise ValueError("height must be > 0")
-        self.__height = value
+        self.__height = int(value)
 
     @property
     def x(self):
-        '''getting x'''
+        '''getting value of x'''
         return self.__x
 
     @x.setter
     def x(self, value):
-        '''setting x'''
+        '''setting value of x'''
         if not isinstance(value, int):
             raise TypeError("x must be a integer")
         if value < 0:
             raise ValueError("x must be >= 0")
 
-        self.__x = value
+        self.__x = int(value)
 
     @property
     def y(self):
-        '''getting y'''
+        '''getting value of y'''
         return self.__y
 
     @y.setter
     def y(self, value):
-        '''setting y'''
+        '''setting value of y'''
         if not isinstance(value, int):
             raise TypeError("y must be a integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value
+        self.__y = int(value)
 
     def area(self):
-        '''Getting area'''
+        '''Getting area of object'''
         return int(self.width) * int(self.height)
+
+    def display(self):
+        '''displaying # character in stdout'''
+        for height in range(self.height):
+            for width in range(self.width):
+                print("#", end="")
+            print()
