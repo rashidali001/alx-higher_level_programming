@@ -43,19 +43,19 @@ class Rectangle(Base):
     @property
     def get_x(self):
         '''getting x'''
-        return self.__width
+        return self.__x
 
     @get_x.setter
     def set_x(self, value):
         '''setting x'''
-        self.__height = value
+        self.__x = value
 
     @property
     def get_y(self):
         '''getting y'''
-        return self.__width
+        return self.__y
 
     @get_y.setter
     def set_y(self, value):
         '''setting y'''
-        self.__height = value
+        self.__y = value
