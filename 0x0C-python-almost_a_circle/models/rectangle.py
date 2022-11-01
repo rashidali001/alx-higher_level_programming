@@ -132,7 +132,7 @@ class Rectangle(Base):
                     self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
-        # Updating object values
+        '''Updating object values'''
         count = 0
         for arg in args:
             if count == 0:
