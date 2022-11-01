@@ -131,18 +131,34 @@ class Rectangle(Base):
             .format(self.__class__.__name__,
                     self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''Updating object values'''
-        count = 0
-        for arg in args:
-            if count == 0:
-                super(Rectangle, self).__init__(args[count])
-            if count == 1:
-                self.__width = args[count]
-            if count == 2:
-                self.__height = args[count]
-            if count == 3:
-                self.__x = args[count]
-            if count == 4:
-                self.__y = args[count]
-            count += 1
+        if len(args) != 0:
+            count = 0
+            for arg in args:
+                if count == 0:
+                    super(Rectangle, self).__init__(args[count])
+                if count == 1:
+                    self.__width = args[count]
+                if count == 2:
+                    self.__height = args[count]
+                if count == 3:
+                    self.__x = args[count]
+                if count == 4:
+                    self.__y = args[count]
+                count += 1
+
+        if len(args) == 0:
+            for i, j in kwargs.items():
+                if str(i) == "height":
+                    self.__height = int(j)
+                    continue
+                if str(i) == "width":
+                    self.__width = int(j)
+                    continue
+                if str(i) == "x":
+                    self.__x = int(j)
+                    continue
+                if str(i) == "y":
+                    self.__y = int(j)
+                    continue
