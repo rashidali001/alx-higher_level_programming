@@ -106,6 +106,7 @@ class Rectangle(Base):
             raise TypeError("y must be a integer")
         if value < 0:
             raise ValueError("y must be >= 0")
+
         self.__y = int(value)
 
     def area(self):
@@ -125,6 +126,23 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        '''Displaying object information'''
         return "[{}] ({}) {}/{} - {}/{}"\
             .format(self.__class__.__name__,
                     self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        # Updating object values
+        count = 0
+        for arg in args:
+            if count == 0:
+                super(Rectangle, self).__init__(args[count])
+            if count == 1:
+                self.__width = args[count]
+            if count == 2:
+                self.__height = args[count]
+            if count == 3:
+                self.__x = args[count]
+            if count == 4:
+                self.__y = args[count]
+            count += 1
