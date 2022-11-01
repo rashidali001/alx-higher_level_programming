@@ -133,6 +133,8 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''Updating object values'''
+
+        '''Using args'''
         if len(args) != 0:
             count = 0
             for arg in args:
@@ -147,7 +149,7 @@ class Rectangle(Base):
                 if count == 4:
                     self.__y = args[count]
                 count += 1
-
+        '''using Kwargs'''
         if len(args) == 0:
             for i, j in kwargs.items():
                 if str(i) == "height":
@@ -162,3 +164,6 @@ class Rectangle(Base):
                 if str(i) == "y":
                     self.__y = int(j)
                     continue
+
+
+
