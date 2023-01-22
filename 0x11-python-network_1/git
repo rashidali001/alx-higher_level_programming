@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+git add .
+git commit -m "Python network 1"
+git push
+
