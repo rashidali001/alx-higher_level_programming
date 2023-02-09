@@ -6,12 +6,13 @@ const request = require('request');
 const fs = require('fs');
 
 request(`${URL}`, (error, response, body) => {
-  if (error){
+  if (error) {
     console.error(error);
   }
   const content = body;
   fs.writeFile(`${path}`, content, 'utf-8', (error) => {
-  if (error){
-    console.error(error);
-  }
-})});
+    if (error) {
+      console.error(error);
+    }
+  });
+});
