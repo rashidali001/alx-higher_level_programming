@@ -16,5 +16,5 @@ request(`${URL}`, (error, response, body) => {
       }
     }
   }
-  console.log(count + '\n');
+  console.log(count);
 });
