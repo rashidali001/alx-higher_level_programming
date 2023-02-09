@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 git add *
-git commit -m "Task 0: Readme"
+git commit -m "Task 2: Status code"
 git push
